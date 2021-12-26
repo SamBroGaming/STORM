@@ -104,8 +104,8 @@ def TC_movement(lon_genesis_list,lat_genesis_list,basin):
     landfallall : landfall (0=no 1=yes) along the track for every TC in a year
     """
 
-    basins=['EP','NA','NI','SI','SP','WP']
-    basin_name = dict(zip(basins,[0,1,2,3,4,5]))
+    basins=['NP','NA','NI','SI','SP']
+    basin_name = dict(zip(basins,[0,1,2,3,4]))
     idx=basin_name[basin]
     
     constants_all=np.load(os.path.join(__location__,'TRACK_COEFFICIENTS.npy'),allow_pickle=True,encoding='latin1').item()
