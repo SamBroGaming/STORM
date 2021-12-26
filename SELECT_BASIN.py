@@ -91,8 +91,8 @@ def Basins_WMO(basin):
     #We follow the basin definitions from the IBTrACS dataset, but with lat boundaries set at 60 N/S
     #The ENP/AO border will be defined in the algorithm later. 
     
-    basins=['EP','NA','NI','SI','SP','WP']
-    basin_name = dict(zip(basins,[0,1,2,3,4,5]))
+    basins=['NP','NA','NI','SI','SP']
+    basin_name = dict(zip(basins,[0,1,2,3,4]))
     idx=basin_name[basin]
     
     s=Storms(idx)
