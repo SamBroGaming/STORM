@@ -19,19 +19,18 @@ dir_path=os.path.dirname(os.path.realpath(sys.argv[0]))
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 #Basin indices: 
-# 0 = EP = Eastern Pacific
+# 0 = NP = North Pacific
 # 1 = NA = North Atlantic
 # 2 = NI = North Indian
 # 3 = SI = South Indian
 # 4 = SP = South Pacific
-# 5 = WP = Western Pacific
 
 def Genesis_month(idx,storms):
     """
     Sample the genesis months for every TC
     Parameters
     ----------
-    idx : basin index (0=EP 1=NA 2=NI 3=SI 4=SP 5=WP).
+    idx : basin index (0=NP 1=NA 2=NI 3=SI 4=SP).
     storms : number of TCs.
 
     Returns
@@ -55,7 +54,7 @@ def Storms(idx):
 
     Parameters
     ----------
-    idx : basin index (0=EP 1=NA 2=NI 3=SI 4=SP 5=WP).
+    idx : basin index (0=NP 1=NA 2=NI 3=SI 4=SP).
 
     Returns
     -------
@@ -63,7 +62,7 @@ def Storms(idx):
 
     """
     mu_list=np.loadtxt(os.path.join(__location__,'POISSON_GENESIS_PARAMETERS.txt'))
-    #mu_list has the shape [EP,NA,NI,SI,SP,WP]
+    #mu_list has the shape [NP,NA,NI,SI,SP]
     
     mu=mu_list[idx]
 
@@ -100,8 +99,8 @@ def Basins_WMO(basin):
     
     month=Genesis_month(idx,s)
   
-    if idx==0: #Eastern Pacific
-        lat0,lat1,lon0,lon1=5,60,180,285
+    if idx==0: #North Pacific
+        lat0,lat1,lon0,lon1=5,60,100,285
     if idx==1: #North Atlantic
         lat0,lat1,lon0,lon1=5,60,255,359
     if idx==2: #North Indian
@@ -110,8 +109,6 @@ def Basins_WMO(basin):
         lat0,lat1,lon0,lon1=-60,-5,10,135
     if idx==4: #South Pacific
         lat0,lat1,lon0,lon1=-60,-5,135,240
-    if idx==5: #Western Pacific
-        lat0,lat1,lon0,lon1=5,60,100,180
         
     return s,month,lat0,lat1,lon0,lon1 
 
