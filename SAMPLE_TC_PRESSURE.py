@@ -340,7 +340,7 @@ def TC_pressure(basin,latlist,lonlist,landfalllist,year,storms,monthlist,TC_data
 
     """
 
-    basin_name = dict(zip(['EP','NA','NI','SI','SP','WP'],[0,1,2,3,4,5]))
+    basin_name = dict(zip(['NP','NA','NI','SI','SP'],[0,1,2,3,4]))
     
     idx=basin_name[basin]
 
