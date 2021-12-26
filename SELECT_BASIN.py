@@ -62,7 +62,7 @@ def Storms(idx):
 
     """
     mu_list=np.loadtxt(os.path.join(__location__,'POISSON_GENESIS_PARAMETERS.txt'))
-    #mu_list has the shape [NP,NA,NI,SI,SP]
+    #mu_list has the shape [EP,NA,NI,SI,SP,WP]
     
     mu=mu_list[idx]
 
