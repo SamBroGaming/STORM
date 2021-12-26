@@ -32,8 +32,8 @@ start_time=time.time()
 #==============================================================================
 # Step 1: Define basin and number of years to run
 #==============================================================================
-#please set basin (EP,NA,NI,SI,SP,WP)
-basin='EP'
+#please set basin (NP,NA,NI,SI,SP)
+basin='NP'
 loop=0 #ranges between 0 and 9 to simulate slices of 1000 years
 
 total_years=1000 #set the total number of years you'd like to simulate
