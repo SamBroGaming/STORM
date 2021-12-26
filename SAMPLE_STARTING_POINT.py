@@ -122,8 +122,8 @@ def Startingpoint(no_storms,monthlist,basin):
     lat_coordinates : list of latitude coordinates of genesis locations
 
     """
-    basins=['EP','NA','NI','SI','SP','WP']
-    basin_name = dict(zip(basins,[0,1,2,3,4,5]))
+    basins=['NP','NA','NI','SI','SP']
+    basin_name = dict(zip(basins,[0,1,2,3,4]))
     idx=basin_name[basin]
     
     lon_coordinates=[]
